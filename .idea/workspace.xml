@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="012f632f-d857-40c4-b9da-35acef165f17" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="25gLpZoSQPui5SSyrL27h8wKL70" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ethics Learning5" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.LibraryManagementSystem.infrastructure" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LibraryManagementSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="LibraryManagementSystem" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.LibraryManagementSystem.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="012f632f-d857-40c4-b9da-35acef165f17" name="Default Changelist" comment="" />
+      <created>1645943967613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645943967613</updated>
+      <workItem from="1645943968940" duration="607000" />
+      <workItem from="1645944647832" duration="7341000" />
+      <workItem from="1646024555897" duration="424000" />
+      <workItem from="1646025645389" duration="1471000" />
+      <workItem from="1646047652097" duration="2552000" />
+      <workItem from="1646193204481" duration="20650000" />
+      <workItem from="1646286577431" duration="7225000" />
+      <workItem from="1646371126685" duration="8271000" />
+      <workItem from="1646384420382" duration="6862000" />
+      <workItem from="1646458765344" duration="7607000" />
+      <workItem from="1646547762337" duration="1524000" />
+      <workItem from="1646629387363" duration="1981000" />
+      <workItem from="1646728744980" duration="10720000" />
+      <workItem from="1646800853955" duration="10199000" />
+      <workItem from="1646884092839" duration="2811000" />
+      <workItem from="1646898929528" duration="802000" />
+      <workItem from="1647229988225" duration="6898000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LibraryManagementSystem_/src/main/java/com/LibraryManagementSystem/service/Impl/BookTrackorServiceImpl.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LibraryManagementSystem_/src/main/java/com/LibraryManagementSystem/service/Impl/BookTrackorServiceImpl.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
