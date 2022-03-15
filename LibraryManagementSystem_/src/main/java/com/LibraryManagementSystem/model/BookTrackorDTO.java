@@ -15,7 +15,7 @@ public class BookTrackorDTO {
     private Date takenDate;
     private Date returnDate;
     private String comment;
-    private Long bookId;
+    private String bookId;
     private int status;
 
 }

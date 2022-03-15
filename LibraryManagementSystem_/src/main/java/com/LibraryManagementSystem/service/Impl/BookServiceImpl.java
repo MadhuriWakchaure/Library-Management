@@ -35,6 +35,7 @@ public class BookServiceImpl implements BookService {
                 .id(bookDTO.getId())
                 .name(bookDTO.getName())
                 .bookId(bookDTO.getBookId())
+                .copies(bookDTO.getCopies())
                 .personId(bookDTO.getPersonId())
                 .returnDate(bookDTO.getReturnDate())
                 .isAvailable(bookDTO.isAvailable())
@@ -54,6 +55,7 @@ public class BookServiceImpl implements BookService {
             Book book = bookRepository.findById(id).get();
             book.setName(bookDTO.getName());
             book.setBookId(bookDTO.getBookId());
+            book.setCopies(bookDTO.getCopies());
             book.setPersonId(bookDTO.getPersonId());
             book.setAvailable(bookDTO.isAvailable());
             book.setTakenBy(bookDTO.getTakenBy());
@@ -72,6 +74,10 @@ public class BookServiceImpl implements BookService {
 
     public Book getbook(Long id) {
         return bookRepository.findById(id).get();
+    }
+
+    public List<Book> getbooklist(String keyword) {
+        return bookRepository.existByBookId(keyword.trim());
     }
 
 //    public List<Book> getbooklist(String bookId, String keyword) {

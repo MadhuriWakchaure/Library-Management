@@ -32,6 +32,7 @@ public class BookTrackorServiceImpl implements BookTrackorService {
     public BookTrackor savebooktrackordetails(BookTrackorDTO bookTrackorDTO) {
         Date date = new Date();
         long taken_date = date.getTime();
+
         BookTrackor bookTrackor=BookTrackor.builder()
                 .id(bookTrackorDTO.getId())
                 .name(bookTrackorDTO.getName())
@@ -43,20 +44,20 @@ public class BookTrackorServiceImpl implements BookTrackorService {
                 .returnDate(bookTrackorDTO.getReturnDate())
                 .status(bookTrackorDTO.getStatus())
                 .build();
-        bookTrackorRepository.save(bookTrackor);
+        return bookTrackorRepository.save(bookTrackor);
 
-        Book book = Book.builder()
-                .id(bookTrackorDTO.getId())
-                .bookId(bookTrackorDTO.getBookId())
-                .personId(bookTrackorDTO.getPersonId())
-                .returnDate(bookTrackorDTO.getReturnDate())
-               .isAvailable(false)
-                .status(bookTrackorDTO.getStatus())
-                .takenBy(bookTrackorDTO.getName())
-                .takenDate(new Date(taken_date))
-                .build();
-         bookRepository.save(book);
-         return bookTrackor;
+//        Book book = Book.builder()
+//                .id(bookTrackorDTO.getId())
+//                .bookId(bookTrackorDTO.getBookId())
+//                .personId(bookTrackorDTO.getPersonId())
+//                .returnDate(bookTrackorDTO.getReturnDate())
+//               .isAvailable(false)
+//                .status(bookTrackorDTO.getStatus())
+//                .takenBy(bookTrackorDTO.getName())
+//                .takenDate(new Date(taken_date))
+//                .build();
+//         bookRepository.save(book);
+//         return bookTrackor;
 
     }
 
@@ -68,41 +69,45 @@ public class BookTrackorServiceImpl implements BookTrackorService {
             Date date = new Date();
 
             long taken_date = date.getTime();
-            bookTrackor.setName(bookTrackorDTO.getName());
-            bookTrackor.setPersonId(bookTrackorDTO.getPersonId());
+            long return_date=date.getTime();
+//            bookTrackor.setName(bookTrackorDTO.getName());
+//            bookTrackor.setPersonId(bookTrackorDTO.getPersonId());
             bookTrackor.setBookId(bookTrackorDTO.getBookId());
-            bookTrackor.setDepartment(bookTrackorDTO.getDepartment());
+//            bookTrackor.setDepartment(bookTrackorDTO.getDepartment());
             bookTrackor.setComment(bookTrackorDTO.getComment());
-            bookTrackor.setReturnDate(bookTrackor.getReturnDate());
-            bookTrackor.setTakenDate(new Date(taken_date));
+            bookTrackor.setReturnDate(new Date(return_date));
+//            bookTrackor.setTakenDate(new Date(taken_date));
             bookTrackor.setStatus(bookTrackorDTO.getStatus());
 
 
-            if (bookRepository.existsByBookId(bookTrackor.getBookId())) {
-
-//                 bookId = Long.valueOf((Long) bookId);
-
-
-
-                Book book = bookRepository.findByBookId(bookTrackor.getBookId());
-                long bookId = book.getBookId();
-                log.error("Book id "+bookId);
-                //            book.setName(bookDTO.getName());
-               book.setBookId(bookTrackorDTO.getBookId());
-                book.setPersonId(bookTrackorDTO.getPersonId());
-//            book.setAvailable(bookTrackorDTO.isAvailable());
-                book.setTakenBy(bookTrackorDTO.getName());
-                book.setTakenDate(new Date(taken_date));
-                book.setStatus(bookTrackorDTO.getStatus());
-                bookRepository.save(book);
-            }
+//            if (bookRepository.existsByBookId(bookTrackor.getBookId())) {
+//
+//
+//
+//
+//
+//                Book book = bookRepository.findByBookId(bookTrackor.getBookId());
+//                long bookId = book.getBookId();
+//                log.error("Book id "+bookId);
+//                book.setBookId(bookTrackorDTO.getBookId());
+//                book.setPersonId(bookTrackorDTO.getPersonId());
+//                book.setTakenBy(bookTrackorDTO.getName());
+//                book.setTakenDate(new Date(taken_date));
+//                book.setStatus(bookTrackorDTO.getStatus());
+//                bookRepository.save(book);
+//            }
             return bookTrackorRepository.save(bookTrackor);
         }
-        return null;
-    }
+       return null;
+   }
 
     public List<BookTrackor> getbookTrackordetails() {
         return bookTrackorRepository.findAll();
+    }
+
+
+    public List<BookTrackor> getbooktrackorsearchlist(String keyword) {
+        return bookTrackorRepository.existsBydetails(keyword);
     }
 }
 

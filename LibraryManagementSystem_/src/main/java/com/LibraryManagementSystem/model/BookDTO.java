@@ -10,7 +10,8 @@ import java.util.Date;
 public class BookDTO {
     private Long id;
     private String name;
-    private Long bookId;
+    private String bookId;
+    private Long copies;
     private String takenBy;
     private long personId;
     private Date returnDate;

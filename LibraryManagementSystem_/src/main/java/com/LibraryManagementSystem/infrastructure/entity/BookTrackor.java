@@ -28,7 +28,7 @@ public class BookTrackor implements Serializable {
     private Date returnDate;
     private String comment;
     private int status;
-    private Long bookId;
+    private String bookId;
 //    private long book_id;
 
 

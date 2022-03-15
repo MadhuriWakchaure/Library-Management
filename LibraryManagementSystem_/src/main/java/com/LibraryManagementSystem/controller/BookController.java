@@ -47,15 +47,15 @@ return new ResponseEntity<>(map, HttpStatus.OK);
        map.put("book",bookServiceImpl.getbook(id));
        return new ResponseEntity<>(map,HttpStatus.OK);
 }
-//@GetMapping("/search/book")
-//    private ResponseEntity<?> getBookbysearch(@RequestParam String bookId,String keyword){
-//        Map<String,Object>map=new HashMap<>();
-//        map.put("book",bookServiceImpl.getbooklist(bookId,keyword));
-//        log.info("Id {} successfully fetched from database",bookId);
-//        log.info("Search {} successfully fetched from databse",keyword);
-//
-//        return new ResponseEntity<>(map,HttpStatus.OK);
-//}
+@GetMapping("/search/book")
+    private ResponseEntity<?> getBookbysearch(@RequestParam String keyword){
+        Map<String,Object>map=new HashMap<>();
+//    keyword = keyword.replaceAll("[0-9.'\"]+", "").trim();
+        map.put("book",bookServiceImpl.getbooklist(keyword));
+        log.info("Search {} successfully fetched from databse",keyword);
+
+        return new ResponseEntity<>(map,HttpStatus.OK);
+}
 
 
 

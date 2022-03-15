@@ -16,6 +16,11 @@ Book findByBookId(Long bookId);
 
     boolean existsByBookId(long bookId);
 
+@Query(value="SELECT * from book where book_id = ?1",nativeQuery = true)
+    Book findBybookID(String bookid);
+
+    @Query(value="SELECT * FROM book WHERE book_id Like %?1% and status=0 OR name Like %?1% and status=0 ",nativeQuery = true)
+    List<Book> existByBookId(String keyword);
 
 
 }
